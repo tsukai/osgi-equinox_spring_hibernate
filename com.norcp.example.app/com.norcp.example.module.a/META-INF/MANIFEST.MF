@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: A
+Bundle-SymbolicName: com.norcp.example.module.a
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.com.norcp.example.module.a.pojo,
+ org.com.norcp.example.module.a.service.api
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

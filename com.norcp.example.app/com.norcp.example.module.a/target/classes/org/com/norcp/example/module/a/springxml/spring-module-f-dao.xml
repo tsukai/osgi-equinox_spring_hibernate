@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+  http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <!-- Dao:UserDao -->
+  <bean id="userDao" 
+    class="com.norcp.example.module.f.dao.impl.UserDaoImpl">
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+  </bean>
+
+  <!-- Service:UserServiceo -->
+  <bean id="userService" 
+	class="com.norcp.example.module.f.service.impl.UserService">
+	<property name="userDao" ref="userDao" />
+  </bean>
+
+</beans>

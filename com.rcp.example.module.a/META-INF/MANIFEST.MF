@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: A
+Bundle-SymbolicName: com.rcp.example.module.a; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.rcp.example.module.a.Activator
+Bundle-Vendor: RCP
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.springframework.beans;bundle-version="2.5.6",
+ org.springframework.context;bundle-version="2.5.6",
+ org.springframework.core;bundle-version="2.5.6"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Import-Package: com.norcp.example.module.h.domain,
+ com.norcp.example.module.h.service.api,
+ org.com.norcp.example.module.a.pojo,
+ org.com.norcp.example.module.a.service.api
+Export-Package: com.rcp.example.module.a.actions

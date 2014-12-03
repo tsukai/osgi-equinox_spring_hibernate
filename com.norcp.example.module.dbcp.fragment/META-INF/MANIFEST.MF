@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: com.norcp.example.module.dbcp.fragment
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: NORCP
+Fragment-Host: com.springsource.org.apache.commons.dbcp;bundle-version="1.2.2.osgi"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+DynamicImport-Package: *
+Export-Package: com.norcp.example.module.dbcp.fragment

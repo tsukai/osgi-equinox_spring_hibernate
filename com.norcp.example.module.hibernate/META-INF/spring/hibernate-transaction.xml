@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd   
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">  
+	
+
+	<!-- TransactionManager -->	
+    <bean id="transactionManager" 
+    	class="org.springframework.orm.hibernate3.HibernateTransactionManager" >
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	    
+	<!-- <aop:aspectj-autoproxy />
+    <context:annotation-config />
+ 	<context:component-scan base-package="com.norcp.example.module" /> -->
+    <!-- @Transactional -->
+   <!--  <tx:annotation-driven transaction-manager="transactionManager"  />   --> 
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*Add" propagation="REQUIRED" />
+			<tx:method name="*Del" propagation="REQUIRED" />
+			<tx:method name="*Mod" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="*Save" propagation="REQUIRED" />
+			<tx:method name="save" propagation="REQUIRED" />
+			<tx:method name="update" propagation="REQUIRED" />
+			<tx:method name="add" propagation="REQUIRED" />
+			<tx:method name="remove" propagation="REQUIRED" />
+			<tx:method name="removeById" propagation="REQUIRED" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="*" read-only="true" />
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="interceptorPointCuts" expression="execution(* com.norcp.example.module.*.service.impl.*.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="interceptorPointCuts" />
+    </aop:config>
+	
+</beans>

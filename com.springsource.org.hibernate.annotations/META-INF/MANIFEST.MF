@@ -1,0 +1,58 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JBoss Hibernate Annotations
+Bundle-SymbolicName: com.springsource.org.hibernate.annotations
+Bundle-Version: 3.4.0.GA
+Bundle-Vendor: SpringSource
+Fragment-Host: com.springsource.org.hibernate;bundle-version="[3.3.1.GA,3.4.0)"
+Export-Package: org.hibernate;version="3.4.0.GA",
+ org.hibernate.annotations;version="3.4.0.GA";uses:="javax.persistence",
+ org.hibernate.cfg;version="3.4.0.GA";
+  uses:="javax.persistence,
+   org.dom4j,
+   org.hibernate,
+   org.hibernate.annotations,
+   org.hibernate.annotations.common.reflection,
+   org.hibernate.cfg.annotations,
+   org.hibernate.engine,
+   org.hibernate.mapping,
+   org.w3c.dom,
+   org.xml.sax",
+ org.hibernate.cfg.annotations;version="3.4.0.GA";
+  uses:="javax.persistence,
+   org.hibernate,
+   org.hibernate.annotations,
+   org.hibernate.annotations.common.reflection,
+   org.hibernate.cfg,
+   org.hibernate.mapping",
+ org.hibernate.cfg.annotations.reflection;version="3.4.0.GA";
+  uses:="javax.persistence,
+   org.dom4j,
+   org.hibernate.annotations.common.annotationfactory,
+   org.hibernate.annotations.common.reflection",
+ org.hibernate.cfg.search;version="3.4.0.GA";uses:="org.hibernate.event",
+ org.hibernate.ejb;version="3.4.0.GA",
+ org.hibernate.mapping;version="3.4.0.GA",
+ org.hibernate.type;version="3.4.0.GA";uses:="org.dom4j,org.hibernate,org.hibernate.engine"
+Created-By: 1.5.0_06-b05 (Sun Microsystems Inc.)
+Import-Package: javax.persistence;version="[1.0.0,2.0.0)",
+ org.dom4j;version="[1.6.1,2.0.0)",
+ org.dom4j.io;version="[1.6.1,2.0.0)",
+ org.hibernate.annotations.common.annotationfactory;version="[3.3.0.ga,3.4.0)",
+ org.hibernate.annotations.common.reflection;version="[3.3.0.ga,3.4.0)",
+ org.hibernate.annotations.common.reflection.java;version="[3.3.0.ga,3.4.0)",
+ org.hibernate.annotations.common.util;version="[3.3.0.ga,3.4.0)",
+ org.slf4j;version="[1.3.1,2.0.0)",
+ org.w3c.dom,
+ org.xml.sax
+Implementation-Version: 3.4.0.GA
+Implementation-URL: http://annotations.hibernate.org
+Ant-Version: Apache Ant 1.7.1
+Implementation-Vendor-Id: hibernate.org
+Bundle-Classpath: library.jar,
+ com.springsource.org.hibernate.annotations-3.4.0.GA.jar
+Specification-Version: 1.0
+Specification-Title: Java Persistence
+Implementation-Title: Hibernate Annotations
+Implementation-Vendor: hibernate.org
+Specification-Vendor: jcp.org

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+  http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <!-- Dao:OrganDao -->
+  <bean id="organDao" 
+    class="com.norcp.example.module.h.dao.impl.OrganDaoImpl">
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+  </bean>
+
+  <!-- Service:OrganServiceo -->
+  <bean id="organService" 
+	class="com.norcp.example.module.h.service.impl.OrganService">
+	<property name="organDao" ref="organDao" />
+  </bean>
+
+</beans>
